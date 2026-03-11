@@ -2,7 +2,7 @@ import { useState } from "react";
 import { sanitize, validateEmail } from "../utils/sanitizers.js";
 import { GLOBAL_CSS } from "../constants/defaults.js";
 
-export function SignupScreen({ onSignup, onGoLogin }) {
+export function SignupScreen({ onRequestVerify, onGoLogin }) {
   const [form, setForm] = useState({ name: "", email: "", password: "", confirm: "" });
   const [error, setError] = useState("");
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -27,7 +27,7 @@ export function SignupScreen({ onSignup, onGoLogin }) {
       return;
     }
     setError("");
-    onSignup({ name, email });
+    onRequestVerify({ name, email });
   };
 
   const inputStyle = {
