@@ -38,19 +38,20 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### AI assistant (optional)
 
-The AI advisor uses the Anthropic API. To enable it:
+The AI advisor uses the **Anthropic API** (`https://api.anthropic.com/v1/messages`). To make it work:
 
-1. Copy the example env file:
+1. **Get an API key** from [Anthropic Console](https://console.anthropic.com) (sign up / API keys).
+2. **Create a `.env` file** in the project root (copy from `.env.example`):
    ```bash
    cp .env.example .env
    ```
-2. Add your API key to `.env`:
+3. **Add your key** to `.env` (no quotes):
    ```
-   VITE_ANTHROPIC_API_KEY=your_anthropic_api_key_here
+   VITE_ANTHROPIC_API_KEY=sk-ant-api03-...
    ```
-3. Restart the dev server.
+4. **Restart the dev server** (stop with Ctrl+C, then `npm run dev` again).
 
-Without a key, the app works normally; the AI panel will show instructions to add one.
+Without a key, the app works but the AI panel will show: *"Add your Anthropic API key in a .env file as VITE_ANTHROPIC_API_KEY, then restart the app."*
 
 ### Build for production
 
