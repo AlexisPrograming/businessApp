@@ -28,7 +28,7 @@ A React-based personal finance app with transaction tracking, spending insights,
 ### Install and run
 
 ```bash
-git clone https://github.com/your-username/clearpath-finance.git
+git clone https://github.com/Alexisprogramin/clearpath-finance.git
 cd clearpath-finance
 npm install
 npm run dev
